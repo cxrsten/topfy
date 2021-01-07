@@ -162,7 +162,13 @@ document.getElementById("buttonnext").addEventListener("click", function(){
 
 
     client_id = "6b18daee53bd4b1fba17ad64f95a35f0";
-    redirect_uri = "http://topfy.de/callback.html"
+    function getRedirectURI() {
+        var url = document.location.href;
+        url = url.replace(/authorize/, "callback");
+        return url;
+    }
+    redirect_uri = getRedirectURI();
+
     console.log(redirect_uri)
     console.log(scope);
 
