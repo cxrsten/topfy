@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Topfy - See your Spotify stats</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+		<link rel="manifest" href="favicon/site.webmanifest">
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="index.html" class="logo"><strong>Topfy</strong> <span>Spotify Stats</span></a>
+					</header>
+
+
+				<!-- Main -->
+					<div id="main">
+						<!-- Two -->
+							<section id="two">
+								<div class="inner">
+									<p style="color: red;" id="callbackerror" hidden>ERROR</p>
+									<header class="major">
+										<h2>Login with your Spotify account</h2>
+									</header>
+									<p>Click the button below to login with your spotify-account. We'll keep your data private, don't worry.<br> If you're not ok with us seeing your data, you can select what data we request from spotify.<br>If you still have trust issues, <a href="./go/github.html" target="_blank">take a look at this websites code.</a></p>
+									<div id="settings" hidden>
+										<div class="row">
+											<div class="col-6 col-12-small">
+												<ul class="actions stacked">
+													<li><input type="checkbox" name="scope_user-top-read" id="scope_user-top-read" checked> <label for="scope_user-top-read">user-top-read</label></li>
+													<li><input type="checkbox" name="scope_user-libary-read" id="scope_user-libary-read" checked> <label for="scope_user-libary-read">user-libary-read</label></li>
+													<li><input type="checkbox" name="scope_user-read-currently-playing" id="scope_user-read-currently-playing" checked><label for="scope_user-read-currently-playing">user-read-currently-playing</label></li>
+												</ul>
+											</div>
+											<div class="col-6 col-12-small">
+												<ul class="actions stacked">
+													<li><input type="checkbox" name="scope_user-read-recently-played" id="scope_user-read-recently-played" checked> <label for="scope_user-read-recently-played">user-read-recently-played</label></li>
+													<li><input type="checkbox" name="scope_user-read-playback-state" id="scope_user-read-playback-state" checked> <label for="scope_user-read-playback-state">user-read-playback-state</label></li></li>
+												</ul>
+											</div>
+											<p style="color: red;" id="scopeerror" hidden>Please choose at least one scope. Without any scopes in use, this website is useless.</p>
+										</div>
+
+                                        <ul class="actions">
+                                        <li><a class="button primary small" id="chooseall">Choose all</a></li>
+                                        <li><a class="button small" id="choosenone">Choose none</a></li>
+										</ul>
+										<p>Click <a href="https://developer.spotify.com/documentation/general/guides/scopes/" target="_blank">here</a> for a list of all scopes and their meaning.</p>
+
+										<br>
+									</div>
+                                    <ul class="actions">
+										<li><a id="buttonnext" class="button next">Generate Oauth-Token</a></li>
+										<li><a class="button" id="displaysettingsbutton">Change scopes</a></li>
+									</ul>
+								</div>
+							</section>
+					</div>
+
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<!-- Legal Advice -->
+								<div>
+								<p id="disclaimer">This site is neither affiliated nor partnered with Spotify.</p>
+								</div>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon solid alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="#">hello@topfy.de</a>
+									</div>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="./go/twitter.html" target="_blank" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="./go/github.html" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Topfy</li><li><a href="../legal.html">Legal notice</a></li><li>Images: <a href="https://unsplash.com/" target="_blank">Unsplash</a></li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.12.7/dist/sweetalert2.all.min.js"></script>
+			<script src="src/js/oauth.js"></script>
+	</body>
+</html>
