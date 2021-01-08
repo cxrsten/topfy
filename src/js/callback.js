@@ -13,8 +13,9 @@ var params = new URLSearchParams(res);
 if (params.has("error") === true) {
     window.location.href = "./authorize.html?error=" + params.get("error");
 }
-let code = params.get("code")
-var uri = "http://localhost:5500/callback.html"
+// AB HIER
+    uri = getCookie("topfy_redirect_URI")
+
 var verifier = getCookie("topfy_code_verifier")
 
 function getCookie(cname) {
@@ -34,8 +35,10 @@ function getCookie(cname) {
   }
 
 
-console.log(code)
+
 if (params.has("code") === true) {
+    let code = params.get("code")
+
     // Current Playback
     let data = {
         client_id: "6b18daee53bd4b1fba17ad64f95a35f0",
@@ -44,6 +47,9 @@ if (params.has("code") === true) {
         redirect_uri: uri,
         code_verifier: verifier
     }
+    console.log(uri)
+    console.log(code)
+    console.log(verifier)
     let Url = "https://accounts.spotify.com/api/token"
     $.ajax({
         url: Url,
