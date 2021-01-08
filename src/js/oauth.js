@@ -166,9 +166,9 @@ document.getElementById("buttonnext").addEventListener("click", function(){
         var url = document.location.href;
         url = url.replace(/authorize/, "callback");
         return url;
-    }
-    redirect_uri = getRedirectURI();
-
+    } 
+    redirect_uri = getRedirectURI(); //"http://localhost:5500/callback.html" 
+    document.cookie = "topfy_redirect_URI=" + redirect_uri;
     console.log(redirect_uri)
     console.log(scope);
 
