@@ -75,7 +75,7 @@ document.getElementById("chooseall").addEventListener("click", function(){
 
     Toast_chooseall.fire({
         icon: 'success',
-        title: "All scopes are turned on"
+        title: "All scopes turned on. GIMME ALL OF 'EM!"
     })
 });
 
