@@ -84,3 +84,24 @@ var iftoken = getCookie("topfy_token");
 if (iftoken) {
     document.location.href = "./stats.html?token=" + iftoken;
 }
+
+var cookieNotice = getCookie("cookieNotice");
+
+if (!(cookieNotice)) {
+  const Toast_cookies = Swal.mixin({
+    toast: true,
+    position: 'bottom-start',
+    showConfirmButton: false,
+    showCloseButton: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    }
+  });
+  Toast_cookies.fire({
+    icon: 'warning',
+    title: 'We use cookies',
+    html: "We use cookies only for mandotory storage of information provided by Spotify.<br> Take a look at our <a href='legal.html#cookies'>Cookie Policy</a> to clear any privacy concerns."
+  })
+
+}
