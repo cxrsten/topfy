@@ -2717,6 +2717,7 @@ input, select, textarea {
 /* Tiles */
 
 	.tiles {
+
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
@@ -2755,7 +2756,7 @@ input, select, textarea {
 			min-height: 23em;
 			overflow: hidden;
 			position: relative;
-			width: 40%;
+			width: 50%;
 		}
 
 			.tiles article .image {
@@ -2830,7 +2831,7 @@ input, select, textarea {
 			}
 
 			.tiles article:nth-child(4n - 1), .tiles article:nth-child(4n - 2) {
-				width: 60%;
+				width: 50%;
 			}
 
 			.tiles article:nth-child(6n - 5):before {

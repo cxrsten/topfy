@@ -20,7 +20,7 @@ function getCookie(cname) {
 
 var token = getCookie("topfy_token")
 
-// AJAX REQUEST // // 
+// AJAX REQUEST //
 
 let getTopArtist = (term, offset) => {
     $.ajax({

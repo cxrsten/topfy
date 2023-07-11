@@ -10,6 +10,7 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 		<link rel="manifest" href="favicon/site.webmanifest">
+
 	</head>
 	<body class="is-preload">
 
@@ -109,6 +110,34 @@
 				</footer>
 			</div>
 
+			<script>
+				document.getElementById("topsong").addEventListener("mouseover", () => {
+					document.getElementById("topartist").style.transition = "width 1s"
+					document.getElementById("topsong").style.transition = "width 1s"
+
+					document.getElementById("topartist").style.width = "40%"
+					document.getElementById("topsong").style.width = "60%"
+
+				})
+				document.getElementById("topsong").addEventListener("mouseout", () => {
+					document.getElementById("topartist").style.width = "50%"
+					document.getElementById("topsong").style.width = "50%"
+
+				})
+				document.getElementById("topartist").addEventListener("mouseover", () => {
+					document.getElementById("topartist").style.transition = "width 1s"
+					document.getElementById("topsong").style.transition = "width 1s"
+
+					document.getElementById("topsong").style.width = "40%"
+					document.getElementById("topartist").style.width = "60%"
+
+				})
+				document.getElementById("topartist").addEventListener("mouseout", () => {
+					document.getElementById("topsong").style.width = "50%"
+					document.getElementById("topartist").style.width = "50%"
+
+				})
+			</script>
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
