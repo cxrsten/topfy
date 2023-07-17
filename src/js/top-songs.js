@@ -56,6 +56,7 @@ let getTopSong = (term, offset) => {
                 var second = false
                 y = 0
             }
+            console.log(data)
             for (var i = y; i < max; i++) {
                 /* $("#img_song_" + i).attr("src", data.items[i].images[0].url)
                 $("#name_song_" + i).html(data.items[i].name); */
